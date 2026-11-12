@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie seu Veículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Anuncie seu Veículo</h1>
+            <p>Preencha os dados abaixo para cadastrar seu veículo à venda.</p>
+        </header>
+        <form>
+            <!-- DADOS DO VEÍCULO -->
+            <fieldset>
+                <legend>Dados do Veículo</legend>
+                <label for="modelo">Modelo do veículo:</label>
+                <input type="text" id="modelo" name="modelo"
+                placeholder="Ex: Onix LT 1.0" required>
+                <label for="marca">Marca:</label>
+                <select id="marca" name="marca" required>
+                    <option value="">Selecione uma marca</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Ford">Ford</option>
+                </select>
+                <label for="ano">Ano de fabricação:</label>
+                <input type="number" id="ano" name="ano"
+                min="1950" max="2026" required>
+                <label for="quilometragem">Quilometragem (km):</label>
+                <input type="number" id="quilometragem"
+                name="quilometragem" min="0" placeholder="Ex: 45000">
+                <label for="valor">Valor de venda (R$):</label>
+                <input type="number" id="valor" name="valor"
+                min="0" step="0.01" placeholder="Ex: 55000.00" required>
+                <label for="cor">Cor predominante:</label>
+                <input type="color" id="cor" name="cor" value="#000000">
+                <label for="data">Data de disponibilidade para visita:</label>
+                <input type="date" id="data" name="data">
+                <p class="subtitulo">Tipo de câmbio:</p>
+                <div class="opcoes">
+                    <label>
+                        <input type="radio" name="cambio"
+                        value="Manual" required>
+                        Manual
+                    </label>
+                    <label>
+                        <input type="radio" name="cambio"
+                        value="Automatico">
+                        Automático
+                    </label>
+                </div>
+            </fieldset>
+            <!-- OPCIONAIS E CONTATO -->
+            <fieldset>
+                <legend>Opcionais e Contato</legend>
+                <p class="subtitulo">Opcionais do veículo:</p>
+                <div class="opcoes">
+                    <label>
+                        <input type="checkbox" name="opcionais"
+                        value="Ar-condicionado">
+                        Ar-condicionado
+                    </label>
+                    <label>
+                        <input type="checkbox" name="opcionais"
+                        value="Direcao">
+                        Direção hidráulica/elétrica
+                    </label>
+                    <label>
+                        <input type="checkbox" name="opcionais"
+                        value="Vidros eletricos">
+                        Vidros elétricos
+                    </label>
+                    <label>
+                        <input type="checkbox" name="opcionais"
+                        value="Airbag">
+                        Airbag
+                    </label>
+                    <label>
+                        <input type="checkbox" name="opcionais"
+                        value="Multimidia">
+                        Multimídia
+                    </label>
+                </div>
+                <label for="foto">Foto do veículo:</label>
+                <input type="file" id="foto" name="foto"
+                accept="image/*">
+                <label for="descricao">Descrição e observações:</label>
+                <textarea id="descricao" name="descricao"
+                rows="5"
+                placeholder="Descreva o estado de conservação, revisões, IPVA..."></textarea>
+                <label for="email">E-mail de contato:</label>
+                <input type="email" id="email" name="email"
+                placeholder="exemplo@email.com" required>
+            </fieldset>
+            <!-- BOTÕES -->
+            <div class="botoes">
+                <button type="submit">Cadastrar Veículo</button>
+                <button type="reset" class="limpar">
+                    Limpar Formulário
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
